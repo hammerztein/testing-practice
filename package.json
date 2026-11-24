@@ -4,7 +4,8 @@
   "description": "testing practice project for 'The Odin Project' curriculum",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+	"watch": "jest --watch"
   },
   "author": "Aleksandr",
   "license": "ISC",
