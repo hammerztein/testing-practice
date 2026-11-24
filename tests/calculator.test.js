@@ -15,3 +15,7 @@ test('subtract should return subtraction of two numbers', () => {
 test('multiply should return multiplication of two numbers', () => {
 	expect(calculator.multiply(6, 7)).toBe(42);
 });
+
+test('divide should return division of two numbers', () => {
+	expect(calculator.divide(8, 5)).toBe(1.6);
+});
