@@ -7,3 +7,8 @@ test('to be a function', () => {
 test('to return a string', () => {
 	expect(typeof reverseString('text')).toBe('string');
 });
+
+test('"boomerang" to equal "gnaremoob"', () => {
+	expect(reverseString('boomerang')).toBe('gnaremoob');
+});
+
