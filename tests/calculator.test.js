@@ -11,3 +11,7 @@ test('add should return sum of two numbers', () => {
 test('subtract should return subtraction of two numbers', () => {
 	expect(calculator.subtract(4, -10)).toBe(14);
 });
+
+test('multiply should return multiplication of two numbers', () => {
+	expect(calculator.multiply(6, 7)).toBe(42);
+});
