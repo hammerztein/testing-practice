@@ -8,3 +8,7 @@ test('to return a string', () => {
 	expect(typeof capitalize('text')).toBe('string');
 });
 
+test('capitalize first character of the string', () => {
+	expect(capitalize('hippo')).toBe('Hippo');
+});
+
