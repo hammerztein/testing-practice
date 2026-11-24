@@ -4,3 +4,7 @@ test('calculator should be an object', () => {
 	expect(typeof calculator).toBe('object');
 });
 
+test('add should return sum of two numbers', () => {
+	expect(calculator.add(2, 5)).toBe(7);
+});
+
