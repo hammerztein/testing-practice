@@ -46,3 +46,10 @@ test('multiply should support decimal numbers', () => {
 test('divide should support decimal numbers', () => {
 	expect(calculator.divide(7.5, 2.5)).toBe(3);
 });
+
+test('verify that methods throw an error on NaN number', () => {
+	expect(() => calculator.add(NaN, 2)).toThrow();
+	expect(() => calculator.subtract(NaN, 2)).toThrow();
+	expect(() => calculator.multiply(NaN, 2)).toThrow();
+	expect(() => calculator.divide(NaN, 2)).toThrow();
+});

@@ -1,5 +1,5 @@
 const validateInput = (a, b) => {
-	if (typeof a !== 'number' || typeof b !== 'number') {
+	if (!Number(a) || !Number(b)) {
 		throw new Error('Both inputs should be numbers');
 	}
 };
