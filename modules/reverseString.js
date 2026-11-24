@@ -1,3 +1,6 @@
-const reverseString = () => {};
+const reverseString = (string) => {
+	return string;
+};
 
 export default reverseString;
+
