@@ -19,3 +19,10 @@ test('multiply should return multiplication of two numbers', () => {
 test('divide should return division of two numbers', () => {
 	expect(calculator.divide(8, 5)).toBe(1.6);
 });
+
+test('all methods should throw an error when arguments are not numbers', () => {
+	expect(() => calculator.add(2, 'hello')).toThrow();
+	expect(() => calculator.subtract(2, 'hello')).toThrow();
+	expect(() => calculator.multiply(2, 'hello')).toThrow();
+	expect(() => calculator.divide(2, 'hello')).toThrow();
+});
