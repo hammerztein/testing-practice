@@ -30,3 +30,19 @@ test('all methods should throw an error when arguments are not numbers', () => {
 test('division by zero throws an error', () => {
 	expect(() => calculator.divide(2, 0)).toThrow();
 });
+
+test('add should support decimal numbers', () => {
+	expect(calculator.add(2.5, 5.5)).toBe(8);
+});
+
+test('subtract should support decimal numbers', () => {
+	expect(calculator.subtract(5.5, 2.5)).toBe(3);
+});
+
+test('multiply should support decimal numbers', () => {
+	expect(calculator.multiply(2.5, 2)).toBe(5);
+});
+
+test('divide should support decimal numbers', () => {
+	expect(calculator.divide(7.5, 2.5)).toBe(3);
+});
