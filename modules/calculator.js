@@ -21,6 +21,9 @@ const calculator = {
 		if (typeof a !== 'number' || typeof b !== 'number') {
 			throw new Error('Both inputs should be numbers');
 		}
+		if (b === 0) {
+			throw new Error('Can not divide by zero');
+		}
 		return a / b;
 	},
 };

@@ -26,3 +26,7 @@ test('all methods should throw an error when arguments are not numbers', () => {
 	expect(() => calculator.multiply(2, 'hello')).toThrow();
 	expect(() => calculator.divide(2, 'hello')).toThrow();
 });
+
+test('division by zero throws an error', () => {
+	expect(() => calculator.divide(2, 0)).toThrow();
+});
