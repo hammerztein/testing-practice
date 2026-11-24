@@ -12,3 +12,7 @@ test('capitalize first character of the string', () => {
 	expect(capitalize('hippo')).toBe('Hippo');
 });
 
+test('return empty string with empty input', () => {
+	expect(capitalize('')).toBe('');
+});
+
