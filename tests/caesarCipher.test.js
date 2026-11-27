@@ -16,3 +16,7 @@ test('test letter wrapping from "z" to "a"', () => {
 	expect(ceasarCipher('xyz', 3)).toBe('abc');
 });
 
+test('test case preservation "HeLLo" to "KhOOr"', () => {
+	expect(ceasarCipher('HeLLo', 3)).toBe('KhOOr');
+});
+
