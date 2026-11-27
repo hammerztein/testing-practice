@@ -4,3 +4,6 @@ test('to be a function', () => {
 	expect(typeof ceasarCipher).toBe('function');
 });
 
+test('to return a string', () => {
+	expect(typeof ceasarCipher('text')).toBe('string');
+});
