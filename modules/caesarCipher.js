@@ -3,9 +3,11 @@ const ceasarCipher = (string, key) => {
 	const indexOfInputLetters = string
 		.split('')
 		.map((letter) => alphabet.indexOf(letter));
+
 	const result = indexOfInputLetters
 		.map((letterIndex) => {
-			return alphabet[letterIndex + key];
+			const newindex = (letterIndex + key) % alphabet.length;
+			return alphabet[newindex];
 		})
 		.join('');
 	return result;
