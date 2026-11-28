@@ -7,11 +7,11 @@ const getAvearage = (array) => {
 };
 
 const getMinimumValue = (array) => {
-	return array.sort()[0];
+	return Math.min(...array);
 };
 
 const getMaximumValue = (array) => {
-	return array.sort()[array.length - 1];
+	return Math.max(...array);
 };
 
 const analyzeArray = (array) => {
