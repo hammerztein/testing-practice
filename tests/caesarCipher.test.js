@@ -20,3 +20,7 @@ test('test case preservation "HeLLo" to "KhOOr"', () => {
 	expect(ceasarCipher('HeLLo', 3)).toBe('KhOOr');
 });
 
+test('test non-alphabetical characters, punctuation and spaces', () => {
+	expect(ceasarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+});
+

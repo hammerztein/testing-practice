@@ -5,6 +5,9 @@ const ceasarCipher = (string, key) => {
 
 	const result = userInput
 		.map((letter) => {
+			if (!lowercase.includes(letter.toLowerCase())) {
+				return letter;
+			}
 			if (lowercase.includes(letter)) {
 				const indexOfLetter =
 					(lowercase.indexOf(letter) + key) % lowercase.length;
