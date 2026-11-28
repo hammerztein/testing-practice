@@ -1,24 +1,22 @@
 const ceasarCipher = (string, key) => {
 	const lowercase = [...Array(26)].map((_, i) => String.fromCharCode(i + 97));
-	const upperCase = [...Array(26)].map((_, i) => String.fromCharCode(i + 65));
 	const userInput = string.split('');
 
 	const result = userInput
 		.map((letter) => {
-			if (!lowercase.includes(letter.toLowerCase())) {
+			const isUpperCase = letter === letter.toUpperCase();
+			const normalizedLetter = letter.toLowerCase();
+			if (!lowercase.includes(normalizedLetter)) {
 				return letter;
-			}
-			if (lowercase.includes(letter)) {
-				const indexOfLetter =
-					(lowercase.indexOf(letter) + key) % lowercase.length;
-				return lowercase[indexOfLetter];
 			} else {
 				const indexOfLetter =
-					(upperCase.indexOf(letter) + key) % upperCase.length;
-				return upperCase[indexOfLetter];
+					(lowercase.indexOf(normalizedLetter) + key) % lowercase.length;
+				const ciperedLetter = lowercase[indexOfLetter];
+				return isUpperCase ? ciperedLetter.toUpperCase() : ciperedLetter;
 			}
 		})
 		.join('');
+
 	return result;
 };
 
