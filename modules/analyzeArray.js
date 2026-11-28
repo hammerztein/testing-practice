@@ -1,3 +1,6 @@
-const analyzeArray = () => {};
+const analyzeArray = (array) => {
+	return {};
+};
 
 export default analyzeArray;
+
